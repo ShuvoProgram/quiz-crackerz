@@ -7,7 +7,7 @@ const Feature = () => {
         <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
           <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
             <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-              <span className="relative inline-block">
+              <span className="sm:relative inline-block">
                 <svg
                   viewBox="0 0 52 24"
                   fill="currentColor"
@@ -35,20 +35,14 @@ const Feature = () => {
           </div>
         </div>
         <div className="max-w-screen-xl sm:mx-auto">
-          <div className="grid grid-cols-1 gap-16 row-gap-8 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-16 row-gap-8 lg:grid-cols-1">
             <div className="space-y-8">
               <div>
                 <p className="mb-4 text-xl font-medium">
                   What is the Purpose of React-Router?
                 </p>
                 <p className="text-gray-700">
-                  Space, the final frontier. These are the voyages of the
-                  Starship Enterprise. Its five-year mission: to explore strange
-                  new worlds.
-                  <br />
-                  <br />
-                  Many say exploration is part of our destiny, but it’s actually
-                  our duty to future generations.
+                  Those who need a client-side router, need it for state management. Say you have server-rendered pages, but with some client-side widgets - e.g. a calendar, set of filters or collapsed or open sidebar. Router helps you initialize these components of the page in the exact state you want them. Granted, you could do most of it and all of the use cases I've named on the server, too. But it's usually a lot easier to handle these on the client. You might render it faster on the server, but sometimes, especially when doing partial page updates, it's cheaper and faster to handle that client-side.
                 </p>
               </div>
               <div>
@@ -56,66 +50,17 @@ const Feature = () => {
                   What is a useRef?
                 </p>
                 <p className="text-gray-700">
-                  Well, the way they make shows is, they make one show. That
-                  show's called a pilot.
-                  <br />
-                  <br />
-                  Then they show that show to the people who make shows, and on
-                  the strength of that one show they decide if they're going to
-                  make more shows. Some pilots get picked and become television
-                  programs.Some don't, become nothing. She starred in one of the
-                  ones that became nothing.
+                  useRef() is capable of preserving unique value like usestate but unlike usestate it does not trigger re-render. It is mostly used for targeting Dom nodes/elements which allows us to handle uncontrolled inputs.
+
+                  useRef() returns an object which has a current value that is initialized with the useRef argument(initial value) which is changed after the input/any value.
                 </p>
               </div>
               <div>
                 <p className="mb-4 text-xl font-medium">
-                  Is the Space Pope reptilian!?
+                  What does Context API work?
                 </p>
                 <p className="text-gray-700">
-                  A flower in my garden, a mystery in my panties. Heart attack
-                  never stopped old Big Bear. I didn't even know we were calling
-                  him Big Bear.
-                </p>
-              </div>
-            </div>
-            <div className="space-y-8">
-              <div>
-                <p className="mb-4 text-xl font-medium">
-                  How much money you got on you?
-                </p>
-                <p className="text-gray-700">
-                  The first mate and his Skipper too will do their very best to
-                  make the others comfortable in their tropic island nest.
-                  <br />
-                  <br />
-                  Michael Knight a young loner on a crusade to champion the
-                  cause of the innocent. The helpless. The powerless in a world
-                  of criminals who operate above the law. Here he comes Here
-                  comes Speed Racer. He's a demon on wheels.
-                </p>
-              </div>
-              <div>
-                <p className="mb-4 text-xl font-medium">
-                  Galaxies Orion's sword globular star cluster?
-                </p>
-                <p className="text-gray-700">
-                  A business big enough that it could be listed on the NASDAQ
-                  goes belly up. Disappears!
-                  <br />
-                  <br />
-                  It ceases to exist without me. No, you clearly don't know who
-                  you're talking to, so let me clue you in.
-                </p>
-              </div>
-              <div>
-                <p className="mb-4 text-xl font-medium">
-                  When has justice ever been as simple as a rule book?
-                </p>
-                <p className="text-gray-700">
-                  This is not about revenge. This is about justice. A lot of
-                  things can change in twelve years, Admiral. Well, that's
-                  certainly good to know. About four years. I got tired of
-                  hearing how young I looked.
+                  As with most component-based frontend frameworks, passing some form of data from one component to another is usually a real need. Typically it comes in the form of passing data from a parent to a child component or even child to parent components. This leads to components having data they don’t actually need, but they need to pass on down the tree.
                 </p>
               </div>
             </div>
