@@ -39,7 +39,7 @@ const Feature = () => {
             <div className="space-y-8">
               <div>
                 <p className="mb-4 text-xl font-medium">
-                  The quick, brown fox jumps over a lazy dog?
+                  What is the Purpose of React-Router?
                 </p>
                 <p className="text-gray-700">
                   Space, the final frontier. These are the voyages of the
@@ -53,7 +53,7 @@ const Feature = () => {
               </div>
               <div>
                 <p className="mb-4 text-xl font-medium">
-                  The first mate and his Skipper too will do?
+                  What is a useRef?
                 </p>
                 <p className="text-gray-700">
                   Well, the way they make shows is, they make one show. That

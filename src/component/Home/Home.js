@@ -1,13 +1,10 @@
 import React, { useContext } from 'react';
-import { cartContext, CourseContext } from '../../Root/Root';
+import { CourseContext } from '../../Root/Root';
 import Banner from '../Banner/Banner';
 import Courses from '../Courses/Courses';
 
 const Home = () => {
     const courses = useContext(CourseContext);
-    console.log(courses)
-    const [cart, setCart] = useContext(cartContext);
-    console.log(cart);
     const handleCourse = (e) => {
         console.log(e)
     }

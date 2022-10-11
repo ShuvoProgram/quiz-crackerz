@@ -1,22 +1,36 @@
-import React from 'react';
-import QuizOption from '../QuizOption/QuizOption';
+import React from "react";
+import QuizOption from "../QuizOption/QuizOption";
+import { EyeIcon } from "@heroicons/react/24/solid";
+import swal from "sweetalert";
 
-const QuizItem = ({quiz}) => {
-    // console.log(quiz);
-    const { question, options, correctAnswer } = quiz;
-    
-    return (
+
+const QuizItem = ({ quiz }) => {
+  const { question, options, correctAnswer } = quiz;
+  const eyeCatch = () => {
+    swal("Answer!", correctAnswer, "success");
+    console.log(correctAnswer);
+    return correctAnswer;
+  };
+  return (
+    <div>
+      <div className="grid text-white m-4 p-4 bg-slate-800 rounded-md">
         <div>
-           <div className='grid'>
-            <div>
-                <p>{question}</p>
-                <div>
-                    {options.map(e => <QuizOption options={e}></QuizOption>)}
-                </div>
-            </div>
-           </div>
+          <div className="flex items-center justify-evenly">
+            <p className="w-full">{question}</p>
+            <EyeIcon
+              onClick={() => eyeCatch()}
+              className="h-4 w-4 cursor-pointer"
+            />
+          </div>
+          <div className="grid grid-cols-2">
+            {options.map((e) => (
+              <QuizOption options={e} correct={correctAnswer}></QuizOption>
+            ))}
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default QuizItem;
