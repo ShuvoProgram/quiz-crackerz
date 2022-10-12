@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import BannerImg from '../../assest/Banner.jpg'
 
 const Banner = () => {
   return (
@@ -14,7 +15,7 @@ const Banner = () => {
         </svg>
         <img
           className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
-          src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+          src={BannerImg}
           alt=""
         />
       </div>
@@ -31,11 +32,6 @@ const Banner = () => {
               is real
             </span>
           </h2>
-          <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae. explicabo.
-          </p>
           <div className="flex items-center justify-center">
             <Link
               href="/"

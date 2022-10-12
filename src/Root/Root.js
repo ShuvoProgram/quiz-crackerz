@@ -8,11 +8,11 @@ export const cartContext = createContext([]);
 
 const Root = () => {
     const { data } = useLoaderData()
-    const [cart, setCart] = useState([])
+    const [ans, setAns] = useState({ correct: 2, wrong: 0 })
     return (
         <div>
             <CourseContext.Provider value={data}>
-                <cartContext.Provider value={[cart, setCart]}>
+                <cartContext.Provider value={[ans, setAns]}>
                 <Header></Header>
                 <Outlet></Outlet>
                 <Footer></Footer>

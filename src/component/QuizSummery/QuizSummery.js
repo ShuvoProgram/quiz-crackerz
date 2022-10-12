@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { cartContext } from '../../Root/Root';
 
-const QuizSummery = ({quiz}) => {
-    console.log(quiz)
+const QuizSummery = () => {
+    const [ans] = useContext(cartContext)
+    console.log(ans)
     return (
         <div className='bg-slate-800 py-5 mx-5 rounded-lg'>
             <div className='text-white text-lg'>
                 <h3>Quiz Summary</h3>
-                <p>Correct Ans: </p>
-                <p>Wrong Ans: </p>
+                <p>Correct Ans: {ans.correct.length}</p>
+                <p>Wrong Ans: {ans.wrong.length}</p>
             </div>
         </div>
     );

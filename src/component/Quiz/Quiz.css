@@ -2,3 +2,10 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .quiz{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
