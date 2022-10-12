@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { AcademicCapIcon } from "@heroicons/react/24/solid";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,12 +12,13 @@ const Header = () => {
         <div className="px-4 py-6 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           <div className="relative flex items-center justify-between lg:justify-center lg:space-x-16">
             <ul className="flex items-center hidden space-x-8 lg:flex">
-              <li>
+              <li className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">
                 <NavLink
+                  className={({ isActive }) => isActive ? 'active' : undefined}
                   to="/feature"
                   aria-label="Our product"
                   title="Our product"
-                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">
+                  >
                   Features
                 </NavLink>
               </li>
@@ -30,7 +32,7 @@ const Header = () => {
                 </NavLink>
               </li>
             </ul>
-            <NavLink
+            <Link
               to="/"
               aria-label="Company"
               title="Company"
@@ -39,7 +41,7 @@ const Header = () => {
               <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
                 Coder<span className="text-blue-600">Fast</span>
               </span>
-            </NavLink>
+            </Link>
 
             <ul className="flex items-center hidden space-x-8 lg:flex">
               <li>

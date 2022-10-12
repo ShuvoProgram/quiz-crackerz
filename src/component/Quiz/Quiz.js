@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import QuizItem from '../QuizItem/QuizItem';
+import QuizSummery from '../QuizSummery/QuizSummery';
 import './Quiz.css';
 
 const Quiz = () => {
     const {data} = useLoaderData();
     const {logo, name, questions} = data;
+    const [cart, setCart] = useState([])
     return (
         <div className='mt-5 mb-5'>
             <div>
@@ -19,7 +21,7 @@ const Quiz = () => {
                     }
                 </div>
                 <div className=''>
-                    cart
+                    <QuizSummery quiz={questions}></QuizSummery>
                 </div>
             </div>
         </div>
