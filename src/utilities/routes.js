@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import About from "../component/About/About";
 import Error from "../component/Error/Error";
 import Feature from "../component/Feature/Feature";
 import Home from "../component/Home/Home";
@@ -20,8 +21,8 @@ const route = createBrowserRouter([
         }},
          { path: '/quiz', element: <QuizPage/>},
          { path: '/static', element: <Static/>},
-         { path: '/feature', element: <Feature/>}
-
+         { path: '/feature', element: <Feature/>},
+         { path: '/about', element: <About/>},
      ]
     }
 ])
