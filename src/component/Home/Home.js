@@ -6,7 +6,7 @@ import Courses from '../Courses/Courses';
 const Home = () => {
     const courses = useContext(CourseContext);
     const handleCourse = (e) => {
-        console.log(e)
+        return e;
     }
     return (
         <div>

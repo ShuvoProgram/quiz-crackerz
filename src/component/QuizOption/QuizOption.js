@@ -1,32 +1,35 @@
 import React, { useContext, useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { cartContext } from "../../Root/Root";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { correctContext, wrongContext } from "../../Root/Root";
 
-const QuizOption = ({ options, correct }) => {
-  const [ans, setAns] =  useState({correct: 2, wrong: 0});
-  // const [ans, setAns] = useContext(cartContext)
+const QuizOption = ({ options, corrects }) => {
+  const [correct, setCorrect] = useContext(correctContext);
+  const [wrong, setWrong] = useContext(wrongContext);
+  const [disabled, setDisable] = useState(false);
+
   const handleAnswer = (e) => {
-    if(e === correct){
-      setAns({...ans, correct: ans.correct + 1})
+
+    if (e === corrects) {
+      setCorrect(correct + 1);
+      setDisable(true);
       toast.success("Correct Answer!", {
         position: "top-right",
-        autoClose: 500
-});
+        autoClose: 500,
+      });
     } else {
-      setAns({...ans, wrong: ans.wrong + 1})
+      setWrong(wrong + 1);
+      setDisable(true);
       toast.error("Wrong Answer", {
         position: "top-right",
-        autoClose: 500
-
-})
+        autoClose: 500,
+      });
     }
-  }
-  console.log(ans)
+  };
+  
   return (
-      <div className="m-2 py-2 bg-blue-600 rounded-lg cursor-pointer hover:bg-blue-500">
-      <button
-        onClick={() => handleAnswer(options)}>
+    <div className="m-2 py-2 bg-blue-600 rounded-lg cursor-pointer hover:bg-blue-500">
+      <button onClick={() => handleAnswer(options)} disabled={disabled}>
         {options}
       </button>
       <ToastContainer />

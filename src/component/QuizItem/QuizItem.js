@@ -23,7 +23,7 @@ const QuizItem = ({ quiz }) => {
           </div>
           <div className="options grid grid-cols-2">
             {options.map((e, idx) => (
-              <QuizOption options={e} correct={correctAnswer} key={idx} index={idx}></QuizOption>
+              <QuizOption options={e} corrects={correctAnswer} key={idx} index={idx}></QuizOption>
             ))}
           </div>
         </div>

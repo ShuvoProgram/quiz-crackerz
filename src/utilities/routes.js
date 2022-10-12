@@ -22,7 +22,7 @@ const route = createBrowserRouter([
          { path: '/quiz', element: <QuizPage/>},
          { path: '/static', element: <Static/>},
          { path: '/feature', element: <Feature/>},
-         { path: '/about', element: <About/>},
+         { path: '/about', element: <About/>}
      ]
     }
 ])
